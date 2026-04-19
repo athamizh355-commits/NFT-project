@@ -188,13 +188,17 @@ st.markdown(f"""
 @st.cache_data
 def load_data():
     # ── Level 3: individual sale / event rows ──────────────────────────────
-    cp1      = pd.read_csv(r"data/Level3_cryptopunks_new.csv")
+    CP_FILE_ID = "1OIchAx6pC7YJtckunPgVAt5-23hx9jTp"
+    cp1 = pd.read_csv(f"https://drive.google.com/uc?id={CP_FILE_ID}")
+
     bayc1    = pd.read_csv(r"data/Level3_bayc_new.csv")
 
     MAYC_FILE_ID = "1Z8keoKuj6JY0VDZCZI5LDqH0lT7zP6ud"
     mayc1 = pd.read_csv(f"https://drive.google.com/uc?id={MAYC_FILE_ID}")
     
-    doodles1 = pd.read_csv(r"data/Level3_doodles_new.csv")
+    DOODLES_FILE_ID = "16jgaH_QZS2_AUjv-NpM2JoZ0UwS9Xodm"
+    doodles1 = pd.read_csv(f"https://drive.google.com/uc?id={DOODLES_FILE_ID}")
+
     PP_FILE_ID = "1NWKCaKszVV4pEXVEVO1UKkHRdWEyF3Ay"
     pp1 = pd.read_csv(f"https://drive.google.com/uc?id={PP_FILE_ID}")
 
