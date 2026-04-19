@@ -188,19 +188,18 @@ st.markdown(f"""
 @st.cache_data
 def load_data():
     # ── Level 3: individual sale / event rows ──────────────────────────────
-    CP_FILE_ID = "1OIchAx6pC7YJtckunPgVAt5-23hx9jTp"
-    cp1 = pd.read_csv(f"https://drive.google.com/uc?id={CP_FILE_ID}")
+cp1_url = "https://drive.google.com/uc?export=download&id=1OIchAx6pC7YJtckunPgVAt5-23hx9jTp"
+bayc1_url = "https://drive.google.com/uc?export=download&id=1rwgR9KRwoIyWhUf6qOwR80hZ6LW6Unky"
+mayc1_url = "https://drive.google.com/uc?export=download&id=1Z8keoKuj6JY0VDZCZI5LDqH0lT7zP6ud"
+doodles1_url = "https://drive.google.com/uc?export=download&id=16jgaH_QZS2_AUjv-NpM2JoZ0UwS9Xodm"
+pp1_url = "https://drive.google.com/uc?export=download&id=1NWKCaKszVV4pEXVEVO1UKkHRdWEyF3Ay"
 
-    bayc1    = pd.read_csv(r"data/Level3_bayc_new.csv")
+cp1 = pd.read_csv(cp1_url)
+bayc1 = pd.read_csv(bayc1_url)
+mayc1 = pd.read_csv(mayc1_url)
+doodles1 = pd.read_csv(doodles1_url)
+pp1 = pd.read_csv(pp1_url)
 
-    MAYC_FILE_ID = "1Z8keoKuj6JY0VDZCZI5LDqH0lT7zP6ud"
-    mayc1 = pd.read_csv(f"https://drive.google.com/uc?id={MAYC_FILE_ID}")
-    
-    DOODLES_FILE_ID = "16jgaH_QZS2_AUjv-NpM2JoZ0UwS9Xodm"
-    doodles1 = pd.read_csv(f"https://drive.google.com/uc?id={DOODLES_FILE_ID}")
-
-    PP_FILE_ID = "1NWKCaKszVV4pEXVEVO1UKkHRdWEyF3Ay"
-    pp1 = pd.read_csv(f"https://drive.google.com/uc?id={PP_FILE_ID}")
 
     cp1["collection"]      = "CryptoPunks"
     bayc1["collection"]    = "BAYC"
