@@ -14,7 +14,7 @@ Usage
     streamlit run nft_dashboard.py
 
 The script ships with the same hard-coded sample data that powers the HTML
-dashboard.  Replace the `load_data()` function with real CSV reads to use
+dashboard.  Replace the load_data() function with real CSV reads to use
 your own CSVs.
 """
 
@@ -190,9 +190,13 @@ def load_data():
     # ── Level 3: individual sale / event rows ──────────────────────────────
     cp1      = pd.read_csv(r"data/Level3_cryptopunks_new.csv")
     bayc1    = pd.read_csv(r"data/Level3_bayc_new.csv")
-    mayc1    = pd.read_csv(r"data/Level3_mayc_new.csv")
+
+    MAYC_FILE_ID = "1Z8keoKuj6JY0VDZCZI5LDqH0lT7zP6ud"
+    mayc1 = pd.read_csv(f"https://drive.google.com/uc?id={MAYC_FILE_ID}")
+    
     doodles1 = pd.read_csv(r"data/Level3_doodles_new.csv")
-    pp1      = pd.read_csv(r"data/Level3_pudgy_penguins_new.csv")
+    PP_FILE_ID = "1NWKCaKszVV4pEXVEVO1UKkHRdWEyF3Ay"
+    mayc1 = pd.read_csv(f"https://drive.google.com/uc?id={PP_FILE_ID}")
 
     cp1["collection"]      = "CryptoPunks"
     bayc1["collection"]    = "BAYC"
