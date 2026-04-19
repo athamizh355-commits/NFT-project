@@ -196,7 +196,7 @@ def load_data():
     
     doodles1 = pd.read_csv(r"data/Level3_doodles_new.csv")
     PP_FILE_ID = "1NWKCaKszVV4pEXVEVO1UKkHRdWEyF3Ay"
-    mayc1 = pd.read_csv(f"https://drive.google.com/uc?id={PP_FILE_ID}")
+    pp1 = pd.read_csv(f"https://drive.google.com/uc?id={PP_FILE_ID}")
 
     cp1["collection"]      = "CryptoPunks"
     bayc1["collection"]    = "BAYC"
