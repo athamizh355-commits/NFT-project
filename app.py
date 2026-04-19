@@ -188,18 +188,11 @@ st.markdown(f"""
 @st.cache_data
 def load_data():
     # ── Level 3: individual sale / event rows ──────────────────────────────
-cp1_url = "https://drive.google.com/uc?export=download&id=1OIchAx6pC7YJtckunPgVAt5-23hx9jTp"
-bayc1_url = "https://drive.google.com/uc?export=download&id=1rwgR9KRwoIyWhUf6qOwR80hZ6LW6Unky"
-mayc1_url = "https://drive.google.com/uc?export=download&id=1Z8keoKuj6JY0VDZCZI5LDqH0lT7zP6ud"
-doodles1_url = "https://drive.google.com/uc?export=download&id=16jgaH_QZS2_AUjv-NpM2JoZ0UwS9Xodm"
-pp1_url = "https://drive.google.com/uc?export=download&id=1NWKCaKszVV4pEXVEVO1UKkHRdWEyF3Ay"
-
-cp1 = pd.read_csv(cp1_url)
-bayc1 = pd.read_csv(bayc1_url)
-mayc1 = pd.read_csv(mayc1_url)
-doodles1 = pd.read_csv(doodles1_url)
-pp1 = pd.read_csv(pp1_url)
-
+    cp1      = pd.read_csv(r"data/Level3_cryptopunks_new.csv")
+    bayc1    = pd.read_csv(r"data/Level3_bayc_new.csv")
+    mayc1    = pd.read_csv(r"data/Level3_mayc_new.csv")
+    doodles1 = pd.read_csv(r"data/Level3_doodles_new.csv")
+    pp1      = pd.read_csv(r"data/Level3_pudgy_penguins_new.csv")
 
     cp1["collection"]      = "CryptoPunks"
     bayc1["collection"]    = "BAYC"
